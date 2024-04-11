@@ -9,17 +9,17 @@ import {useAppTheme} from '../../hooks/useAppTheme';
 import {Box, BoxProps} from '../Box/Box';
 import {$fontFamily, $fontSizes, Text} from '../Text/Text';
 
-interface TextInputProps extends RNTextInputProps {
+export interface TextInputProps extends RNTextInputProps {
   label: string;
   errorMessage?: string;
-  rightComponent?: React.ReactElement;
+  RightComponent?: React.ReactElement;
   boxProps?: BoxProps;
 }
 
 export function TextInput({
   label,
   errorMessage,
-  rightComponent,
+  RightComponent,
   boxProps,
   ...rnTextInProps
 }: TextInputProps) {
@@ -52,9 +52,9 @@ export function TextInput({
             {...rnTextInProps}
           />
 
-          {rightComponent && (
+          {RightComponent && (
             <Box justifyContent="center" ml="s16">
-              {rightComponent}
+              {RightComponent}
             </Box>
           )}
         </Box>
