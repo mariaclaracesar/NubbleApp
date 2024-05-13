@@ -21,12 +21,14 @@ import {HeartIcon} from '../../assets/icons/HeartIcon';
 import {HomeFillIcon} from '../../assets/icons/HomeFillIcon';
 import {HomeIcon} from '../../assets/icons/HomeIcon';
 import {MessageIcon} from '../../assets/icons/MessageIcon';
+import {MessageRoundIcon} from '../../assets/icons/MessageRoundIcon';
 import {NewPostIcon} from '../../assets/icons/NewPostIcon';
 import {ProfileFillIcon} from '../../assets/icons/ProfileFillIcon';
 import {ProfileIcon} from '../../assets/icons/ProfileIcon';
 import {SearchIcon} from '../../assets/icons/SearchIcon';
 import {SettingsIcon} from '../../assets/icons/SettingsIcon';
 import {TrashIcon} from '../../assets/icons/TrashIcon';
+import {CheckRoundIcon} from '../../assets/icons/checkRoundIcon';
 import {useAppTheme} from '../../hooks/useAppTheme';
 import {ThemeColors} from '../../theme/theme';
 
@@ -35,7 +37,7 @@ export interface IconBase {
   color?: string;
 }
 
-interface Props {
+export interface IconProps {
   name: IconNames;
   color?: ThemeColors;
   size?: number;
@@ -47,7 +49,7 @@ export function Icon({
   color = 'backgroundContrast',
   size,
   onPress,
-}: Props) {
+}: IconProps) {
   const {colors} = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
@@ -73,6 +75,8 @@ const iconRegistry = {
   chat: ChatIcon,
   chatOn: ChatOnIcon,
   check: CheckIcon,
+  checkRound: CheckRoundIcon,
+  messageRound: MessageRoundIcon,
   comment: CommentIcon,
   chevronRight: ChevronRightIcon,
   eyeOn: EyeOnIcon,
