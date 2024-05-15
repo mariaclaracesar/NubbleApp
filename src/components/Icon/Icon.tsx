@@ -29,8 +29,9 @@ import {SearchIcon} from '../../assets/icons/SearchIcon';
 import {SettingsIcon} from '../../assets/icons/SettingsIcon';
 import {TrashIcon} from '../../assets/icons/TrashIcon';
 import {CheckRoundIcon} from '../../assets/icons/checkRoundIcon';
-import {useAppTheme} from '../../hooks/useAppTheme';
-import {ThemeColors} from '../../theme/theme';
+
+import {useAppTheme} from '@hooks';
+import {ThemeColors} from '@theme';
 
 export interface IconBase {
   size?: number;

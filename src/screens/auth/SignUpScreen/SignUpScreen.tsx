@@ -1,16 +1,18 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {useForm} from 'react-hook-form';
-import {Button} from '../../../components/Button/Button';
-import {FormPasswordInput} from '../../../components/Form/FormPasswordInput';
-import {FormTextInput} from '../../../components/Form/FormTextInput';
-import {Screen} from '../../../components/Screen/Screen';
-import {Text} from '../../../components/Text/Text';
-import {useResetNavigationSuccess} from '../../../hooks/useResetNavigationSuccess';
 import {RootStackParamList} from '../../../routes/Routes';
 import {SignUpSchema, signUpSchema} from './signUpSchema';
 
+import {
+  Button,
+  FormPasswordInput,
+  FormTextInput,
+  Screen,
+  Text,
+} from '@components';
 import {zodResolver} from '@hookform/resolvers/zod';
+import {useResetNavigationSuccess} from '@hooks';
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 
@@ -56,7 +58,7 @@ export function SignUpScreen({navigation}: ScreenProps) {
 
       <FormTextInput
         control={control}
-        name="fullname"
+        name="fullName"
         label="Nome completo"
         placeholder="Digite seu nome completo"
         boxProps={{mb: 's20'}}
