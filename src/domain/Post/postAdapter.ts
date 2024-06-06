@@ -5,12 +5,13 @@ import {Post, PostAPI} from './postTypes';
  */
 function toPost(postApi: PostAPI): Post {
   return {
-    id: postApi.id.toString(),
+    id: postApi.id,
     text: postApi.text,
     author: {
       profileURL: postApi.user.profile_url,
       name: postApi.user.full_name,
       userName: postApi.user.username,
+      id: postApi.user.id,
     },
     imageURL: postApi.image_url,
     reactionCount: parseInt(postApi.meta.like_count, 10),
