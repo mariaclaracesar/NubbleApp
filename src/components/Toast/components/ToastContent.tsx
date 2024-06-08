@@ -16,11 +16,10 @@ interface Props {
   toast: Toast;
 }
 export function ToastComponent({toast}: Props) {
-  const position: Required<Toast>['position'] = toast?.position || 'top';
   const type: ToastType = toast.type || 'success';
 
   return (
-    <Box {...$boxStyle} style={[{[position]: 100}, $shadowProps]}>
+    <Box {...$boxStyle} style={$shadowProps}>
       <Icon {...mapTypeToIcon[type]} />
       <Text style={{flexShrink: 1}} preset="paragraphMedium" bold ml="s16">
         {toast?.message}
