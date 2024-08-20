@@ -8,6 +8,7 @@ import {AuthStack} from './AuthStack';
 
 export function Routes() {
   const {authCredentials} = useAuthCredentials();
+  console.log({authCredentials});
 
   return (
     <NavigationContainer>

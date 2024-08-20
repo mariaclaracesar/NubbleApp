@@ -31,7 +31,7 @@ export function SignUpScreen({navigation}: AuthScreenProps<'SignUpScreen'>) {
     mode: 'onChange',
   });
 
-  function submitForm(formValues: SignUpFormType) {
+  function submitForm(formValues: any) {
     console.log(formValues);
     // reset({
     //   title: 'Sua conta foi criada com sucesso!',
