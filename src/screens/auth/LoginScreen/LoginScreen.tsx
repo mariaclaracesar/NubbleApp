@@ -5,7 +5,13 @@ import {zodResolver} from '@hookform/resolvers/zod';
 import {useToastService} from '@services';
 import {useForm} from 'react-hook-form';
 
-import {Button, FormTextInput, Screen, Text} from '@components';
+import {
+  Button,
+  FormPasswordInput,
+  FormTextInput,
+  Screen,
+  Text,
+} from '@components';
 import {AuthScreenProps} from '@routes';
 
 import {LoginSchema, loginSchema} from './loginSchema';
@@ -54,7 +60,7 @@ export function LoginScreen({navigation}: AuthScreenProps<'LoginScreen'>) {
         boxProps={{mb: 's20'}}
       />
 
-      <FormTextInput
+      <FormPasswordInput
         control={control}
         name="password"
         label="Senha"

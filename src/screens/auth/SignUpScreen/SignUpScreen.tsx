@@ -92,7 +92,6 @@ export function SignUpScreen({}: AuthScreenProps<'SignUpScreen'>) {
         control={control}
         name="password"
         label="Senha"
-        secureTextEntry
         placeholder="Digite sua senha"
         boxProps={{mb: 's48'}}
       />
